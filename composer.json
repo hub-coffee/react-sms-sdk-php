@@ -1,5 +1,5 @@
 {
-  "name": "reactsms-sdk-php/reactsms-sdk-php",
+  "name": "reactsms_sdk_php/reactsms_sdk_php",
   "description": "SDK PHP pour React SMS",
   "type": "library",
   "license": "MIT",
