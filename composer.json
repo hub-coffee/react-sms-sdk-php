@@ -1,0 +1,23 @@
+{
+  "name": "reactsms-sdk-php/reactsms-sdk-php",
+  "description": "SDK PHP pour React SMS",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "React SMS",
+      "email": "contact@react-sms.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.4",
+    "guzzlehttp/guzzle": "^7.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "reactsms_sdk_php\\SDK\\": "reactsms_sdk_php/"
+    }
+  }
+  
+}
+  
