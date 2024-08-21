@@ -2,6 +2,9 @@
 
 ReactSMS SDK for PHP 
 
+This Package can be used in PHP native project and all PHP Framework as Laravel, Symfony ...
+
+
 ## Install Package
 
 To install this SDK, run: 
