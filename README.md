@@ -2,6 +2,14 @@
 
 ReactSMS SDK for PHP 
 
+## Initial Configuration
+
+    <?php 
+
+    use reactsms_sdk_php\SDK\Reactsms;
+
+    require_once './vendor/autoload.php';
+
 
 ## Example Send Message
 
