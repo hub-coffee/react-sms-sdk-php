@@ -2,6 +2,13 @@
 
 ReactSMS SDK for PHP 
 
+## Install Package
+
+To install this SDK, run: 
+
+    composer require reactsms_sdk_php/reactsms_sdk_php
+
+
 ## Initial Configuration
 
     <?php 
