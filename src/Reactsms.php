@@ -26,7 +26,7 @@ class Reactsms {
     public function request($method, $uri, $options = []) {
         $options['headers']['Authorization'] = 'Bearer '.$this->build_token();
         $response = $this->httpClient->request($method, $uri, $options);
-        return json_decode($response->getBody(), true);
+        return $response->getBody(); //json_decode($response->getBody(), true);
     }
 
     private function clean_phones(array $phones) {
@@ -36,22 +36,21 @@ class Reactsms {
             $object_phone = (object) $phone;
             array_push($new_phones, $object_phone);
         }
-
         return $new_phones;
     }
 
     public function send_message(string $message, array $phones) {
         $payload = [
             "message" => $message, 
-            "phones" => json_encode(clean_phones($phones)),
+            "numbers" => json_encode($this->clean_phones($phones)),
             "serviceKey" => $this->serviceKey
         ];
 
-        return $this->request('POST', "/send", ['json' => json_encode($payload)]);
+        return $this->request('POST', "/messages/send", ['json' => $payload]);
     }
 
     public function balance() {
-        return $this->request('GET', "/get_balance");
+        return $this->request('GET', "/messages/get_balance");
     }
 
     public function create_service(string $service_name, int $quota_sms, bool $active_quota, string $description) {
@@ -61,6 +60,6 @@ class Reactsms {
             "active_quota" => $active_quota,
             "description" => $description
         ];
-        return $this->request('POST', "/create_service", ['json' => json_encode($payload)]);
+        return $this->request('POST', "/messages/create_service", ['json' => $payload]);
     }
 }
