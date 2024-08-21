@@ -31,7 +31,7 @@ ReactSMS SDK for PHP
     $AUTH_KEY = "rs_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
     $API_KEY = "rs_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
 
-    $reactsms = new Reactsms($AUTH_KEY, $API_KEY, $SERVICE_KEY);
+    $reactsms = new Reactsms($AUTH_KEY, $API_KEY);
 
     $response = $reactsms->create_service($service_name, $quota_sms, $active_quota, $description);
     print($response);
